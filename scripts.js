@@ -22,12 +22,28 @@
 
 // 0var users = fetch('https://randomuser.me/api/');
 
-var r, usuario, email, telefone;    
+// telefone, email, nome, sobrenome, foto grande
+
+var r, usuario, email, telefone, nome, sobrenome, fotoGrande;    
 
 fetch('https://randomuser.me/api/')
 .then( (resp) => resp.json() )
 .then( function(data) {
     r = data.results[0];
     usuario = r.login.username;
-    console.log(r, usuario);
+    email = r.email;
+    telefone = r.cell;
+    nome = r.name.first;
+    sobrenome = r.name.last;
+    fotoGrande = r.picture.large;
+    console.log(usuario, email, telefone, nome, sobrenome, fotoGrande,
+     r);
+	document.getElementById("um").innerHTML = usuario;
+	document.getElementById("dois").innerHTML = nome;
+	document.getElementById("tres").innerHTML = sobrenome;
+	document.getElementById("quatro").innerHTML = telefone;
+	document.getElementById("cinco").innerHTML = email;
+	document.getElementById("seis").innerHTML = fotoGrande;
+
 });
+

@@ -36,14 +36,18 @@ fetch('https://randomuser.me/api/')
     nome = r.name.first;
     sobrenome = r.name.last;
     fotoGrande = r.picture.large;
+
     console.log(usuario, email, telefone, nome, sobrenome, fotoGrande,
      r);
+
 	document.getElementById("um").innerHTML = usuario;
 	document.getElementById("dois").innerHTML = nome;
 	document.getElementById("tres").innerHTML = sobrenome;
 	document.getElementById("quatro").innerHTML = telefone;
 	document.getElementById("cinco").innerHTML = email;
-	document.getElementById("seis").innerHTML = fotoGrande;
+	// document.getElementById("seis").innerHTML = fotoGrande;
+
+	$('#seis').attr("src", fotoGrande);
 
 });
 

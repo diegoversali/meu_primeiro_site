@@ -51,3 +51,15 @@ fetch('https://randomuser.me/api/')
 
 });
 
+function primeiraFuncao(nome, idade) {
+    console.log( "ready! " + nome + ' ' + idade );
+}
+
+$(function() {
+
+	$(document).on('click', function() {
+		primeiraFuncao("Diego", 150);
+	})
+
+});
+

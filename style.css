@@ -43,3 +43,8 @@
 hr {
 	margin: 40px 0px;
 }
+
+.primeiro-bloco div:first-child { 
+    margin: 30px 30px;
+}
+

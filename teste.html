@@ -3,19 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
 </head>
 <body>
+
+	<style>
+		
+	</style>
+
 	<script>
-		a = 40;
-		function teste(){
-			var a = 100;
-			console.log(a);
-		}
+		
+		$(function() {
 
-		// teste();
+			$("button").on("click", function() {
+				alert("bug");
+			});
 
-		console.log(a);
+			$("#nada").on("mouseenter", function () {
+				alert("hauha");
+			});
 
+
+			$(".c").on("mouseleave", function () {
+				alert("Wow");
+			});
+
+			$(document).keypress (function (e) {
+				alert(e.which);
+			});
+
+
+
+
+		});
+		
 	</script>
+
+
+	<button>click</button>
+	<p>Este texto <span class="c">contém</span> exatamente <span id="nada">nada</span> porque simplesmente não estou com <span id="creativity">criatividade</span> para escrever algo de interessante e estamos todos lendo isso enquanto refltimos a função do Natal em meio a sociedade que só quer comer uma bela ceia.</p>
+
+
 </body>
 </html>

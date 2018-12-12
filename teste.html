@@ -16,7 +16,7 @@
 
 	<script>
 		
-		$(function() {
+		$(document).ready(function() {
 
 			$("button").on("click", function() {
 				alert("bug");
@@ -31,7 +31,7 @@
 				alert("Wow");
 			});
 
-			$(document).keypress (function (e) {
+			$(document).keypress(function (e) {
 				alert(e.which);
 			});
 
